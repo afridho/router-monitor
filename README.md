@@ -125,7 +125,7 @@ All router readings and labels are potentially sensitive. The UI renders strings
 
 Project-authored code is licensed under [MIT](LICENSE). Dependencies retain their own licenses, including `@zakisheriff/liquid-glass` (MIT).
 
-Apple macOS Tahoe wallpaper JPEGs are **not distributed in this repository**; no redistribution license is claimed. A gradient fallback works without them. If you obtain wallpapers separately and are entitled to use them, place `tahoe-light.jpg` and `tahoe-dark.jpg` in `frontend/public/wallpapers/` before building. Source attribution is in [SOURCE.md](frontend/public/wallpapers/SOURCE.md). The MIT license does not grant rights to third-party artwork.
+Apple macOS Tahoe wallpaper JPEGs are included as third-party artwork at the project owner's request; no ownership or redistribution license is claimed. Source attribution is in [SOURCE.md](frontend/public/wallpapers/SOURCE.md). Attribution does not itself grant redistribution permission, and the project's MIT license does not grant rights to third-party artwork. A gradient fallback is available if the JPEGs are removed.
 
 ## Checks and contributions
 
