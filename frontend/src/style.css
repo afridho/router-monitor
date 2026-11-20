@@ -36,6 +36,15 @@ main,#readings,section,.section-title>*{min-width:0}
 .device-facts{gap:8px}
 .device-facts>span{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;border:1px solid var(--edge);background:color-mix(in srgb,var(--ink) 5%,transparent);font-size:.7rem;line-height:1.4;max-width:100%;overflow-wrap:anywhere}
 .device-facts>span:first-child::before{content:'';width:6px;height:6px;flex:none;border-radius:50%;background:currentColor;opacity:.65}
+.device-facts>span[data-status]{--status-color:currentColor}
+.device-facts>span[data-status="online"]{--status-color:#16883e}
+.device-facts>span[data-status="offline"]{--status-color:#d33140}
+:root[data-theme="dark"] .device-facts>span[data-status="online"]{--status-color:#4ade80}
+:root[data-theme="dark"] .device-facts>span[data-status="offline"]{--status-color:#fb7185}
+.device-facts>span[data-status]::before{background:var(--status-color);opacity:1}
+.device-facts>span[data-status="online"]::before,.device-facts>span[data-status="offline"]::before{animation:device-status-pulse 2.4s ease-out infinite}
+@keyframes device-status-pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--status-color) 40%,transparent)}75%,100%{box-shadow:0 0 0 5px transparent}}
+@media(prefers-reduced-motion:reduce){.device-facts>span[data-status]::before{animation:none}}
 .device-details{margin-top:12px}
 .device-details>div{font-size:.75rem}
 @media(max-width:700px){.device-grid{grid-template-columns:minmax(0,1fr)}}
