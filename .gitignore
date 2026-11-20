@@ -1,0 +1,11 @@
+/target
+*.env
+/frontend/node_modules
+/frontend/dist
+/data/
+*.sqlite3*
+*.cookies
+.env
+.env.*
+!.env.example
+/frontend/public/wallpapers/*.jpg

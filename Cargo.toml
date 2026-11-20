@@ -1,0 +1,22 @@
+[package]
+name = "router-monitor"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Read-only Huawei ONT telemetry dashboard with persistent SQLite history"
+repository = "https://github.com/afridho/router-monitor"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "cookies"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+base64 = "0.22"
+regex = "1"
+tower-http = { version = "0.6", features = ["fs"] }
+rusqlite = { version = "0.43.0", features = ["bundled"] }
+
+[profile.release]
+lto = true
+strip = true
